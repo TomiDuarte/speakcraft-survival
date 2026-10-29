@@ -1,0 +1,22 @@
+{
+  "generator": "SudachiPy 0.6.10",
+  "dictionary": "SudachiDict-core 20250515",
+  "entries": 2777,
+  "omitted": {
+    "block.minecraft.player_head.named": "%sの頭",
+    "item.minecraft.bundle.fullness": "%s／%s",
+    "item.minecraft.crossbow.projectile.multiple": "発射物：%2$s x %1$s",
+    "item.minecraft.crossbow.projectile.single": "発射物：%s",
+    "item.minecraft.debug_stick.empty": "%sはプロパティを持っていません",
+    "item.minecraft.debug_stick.select": "「%s」を選択しました（%s）",
+    "item.minecraft.debug_stick.update": "「%s」を%sに変更しました",
+    "item.minecraft.firework_rocket.flight_duration": "飛翔時間：%s",
+    "item.minecraft.firework_rocket.multiple_stars": "%2$s x %1$s",
+    "item.minecraft.firework_rocket.single_star": "%s",
+    "item.minecraft.lingering_potion.effect.wind_charged": "蓄風の残留ポーション",
+    "item.minecraft.music_disc_5.desc": "Samuel Åberg - 5",
+    "item.minecraft.potion.effect.wind_charged": "蓄風のポーション",
+    "item.minecraft.splash_potion.effect.wind_charged": "蓄風のスプラッシュポーション",
+    "item.minecraft.tipped_arrow.effect.wind_charged": "蓄風の矢"
+  }
+}

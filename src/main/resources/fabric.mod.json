@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "speakcraft",
+  "version": "${version}",
+  "name": "SpeakCraft Survival",
+  "description": "Desafíos de vocabulario offline para supervivencia.",
+  "authors": ["TomiDuarte", "SpeakCraft Survival contributors"],
+  "contact": {
+    "homepage": "https://github.com/TomiDuarte/speakcraft-survival",
+    "sources": "https://github.com/TomiDuarte/speakcraft-survival",
+    "issues": "https://github.com/TomiDuarte/speakcraft-survival/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["speakcraft.mixins.json"],
+  "entrypoints": {
+    "main": ["dev.speakcraft.core.SpeakCraft"],
+    "client": ["dev.speakcraft.client.SpeakCraftClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

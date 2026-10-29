@@ -1,0 +1,55 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+base { archivesName = project.archives_base_name }
+repositories { mavenCentral() }
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation include('com.alphacephei:vosk:0.3.45')
+    implementation include('net.java.dev.jna:jna:5.18.1')
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        speakcraft { sourceSet sourceSets.main; sourceSet sourceSets.client }
+    }
+}
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'speakcraft-tests'
+        enableGameTests = true
+        enableClientGameTests = false
+        eula = true
+    }
+}
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    withSourcesJar()
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 25 }
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand 'version': project.version }
+}
+test { useJUnitPlatform() }
+sourceSets.test {
+    compileClasspath += sourceSets.client.output
+    runtimeClasspath += sourceSets.client.output
+}
+jar {
+    from('LICENSE') { rename { "${it}_${project.base.archivesName.get()}" } }
+    from('THIRD_PARTY_NOTICES.md')
+    from('licenses') { into 'META-INF/licenses' }
+}

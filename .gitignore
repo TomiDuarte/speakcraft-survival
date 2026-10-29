@@ -1,0 +1,20 @@
+.gradle/
+.gradle-user/
+.tools/
+build/
+run/
+*.log
+.idea/
+*.iml
+__pycache__/
+*.pyc
+dist/
+.env
+.env.*
+# Local investigation output can contain usernames, game saves or third-party sources.
+verification/*
+!verification/language-sources.json
+!verification/VoskFileSmoke.java
+!verification/VoskModelLoadSmoke.java
+!verification/audit_distribution.py
+!verification/README.md

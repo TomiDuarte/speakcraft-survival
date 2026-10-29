@@ -1,0 +1,17 @@
+﻿[
+    {
+        "url":  "https://resources.download.minecraft.net/90/9031f1831a7ddbbab96bc1a6d7d9dbba92d879f5",
+        "language":  "es_es",
+        "sha1":  "9031f1831a7ddbbab96bc1a6d7d9dbba92d879f5"
+    },
+    {
+        "url":  "https://resources.download.minecraft.net/a9/a9b76c1f25d74ef647ff6025849faf7e86e97973",
+        "language":  "de_de",
+        "sha1":  "a9b76c1f25d74ef647ff6025849faf7e86e97973"
+    },
+    {
+        "url":  "https://resources.download.minecraft.net/a2/a296ac336bb8168fb37226355b683b61926ab748",
+        "language":  "ja_jp",
+        "sha1":  "a296ac336bb8168fb37226355b683b61926ab748"
+    }
+]

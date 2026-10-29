@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "speakcraft-tests",
+  "version": "1.0.0",
+  "name": "SpeakCraft Development Tests",
+  "environment": "*",
+  "entrypoints": { "fabric-gametest": ["dev.speakcraft.SurvivalGameTests"] },
+  "depends": { "speakcraft": "*" }
+}
